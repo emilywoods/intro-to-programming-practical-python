@@ -84,10 +84,15 @@ class Story:
         self.middle(character, transportation)
 
     def middle(self, character, transportation):
-        pass
+        print(
+            f"Travelling by {transportation.name} is {transportation.speed}. {transportation.description}\n"
+        )
+        transportation.encounter_obstacles()
+        self.end(character)
 
     def end(self, character):
         pass
+
 
 new_story = Story()
 new_story.start()
