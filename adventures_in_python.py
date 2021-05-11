@@ -29,7 +29,18 @@ class Walk(Transportation):
         self.description = "It is a long and tiring walk, but scenic.🚶"
 
     def encounter_obstacles(self):
-        pass
+        choice = input(
+            "What time do you leave Hermannplatz? a. Before 14:00 b. After 14:00\n"
+        )
+        if choice == "a":
+            print(
+                "You are very tired when you get to the lake and fall asleep.\n While you are asleep a wild boar runs off with your belongings 🐗"
+            )
+        if choice == "b":
+            print(
+                "Oh no, it is too late. By the time you reach the lake, it is already dark and time to go home. 🌉 :("
+            )
+            exit()
 
 
 class SBahn(Transportation):
@@ -39,7 +50,15 @@ class SBahn(Transportation):
         self.description = "The S-Bahn is busy with people getting out of the city today, but you can read a book, listen to music and gaze out the window. 🚉"
 
     def encounter_obstacles(self):
-        pass
+        choice = input(
+            "You miss your stop and end up in Erkner. What do you do? a. Stay there b. Get back on the s-bahn\n"
+        )
+        if choice == "a":
+            print(
+                "Great! Spend the rest of the day exploring the sights and sounds around Erker!"
+            )
+        if choice == "b":
+            pass
 
 
 class Bicycle(Transportation):
@@ -49,7 +68,27 @@ class Bicycle(Transportation):
         self.description = "Efficient and green - cycling is a great way to explore! 🚲"
 
     def encounter_obstacles(self):
-        pass
+        choice = input(
+            "You are cycling past the Landwehr canal and spot your best friend in a boat on the canal.\nWhat do you do? a. Stop and join the boat party or b. wave and continue\n"
+        )
+        if choice == "a":
+            print(
+                "Who needs the lake? Put on some sunglasses and bob along the canal all day.🚣"
+            )
+            exit()
+        if choice == "b":
+            pass
+
+        choice = input(
+            "Uh oh, another cobble stone road gives you a flat tire.\nWhat do you do? a. Fix it b. Go home\n"
+        )
+        if choice == "a":
+            pass
+        if choice == "b":
+            print(
+                "That's all the adventure for today! The lake will have to wait for another day"
+            )
+            exit()
 
 
 class Character:
