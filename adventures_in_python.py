@@ -91,7 +91,9 @@ class Story:
         self.end(character)
 
     def end(self, character):
-        pass
+        print(
+            f"Yay, {character.name}! You reached the lake by {character.transportation.name}. Time to swim and spend the rest of the day snoozing in the sun ⛵"
+        )
 
 
 new_story = Story()
