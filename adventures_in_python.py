@@ -4,7 +4,7 @@ import time
 def introduction_text(name):
     print("") 
     print(
-        "It's a beautiful summer's day in Berlin, and you are stuck in Alexanderplatz :("
+        "It's a beautiful summer's day in Berlin, and you are stuck in Hermannplatz :("
     )
     print(
         "You don't want to be here. It is too noisy, there is too much traffic and all this concrete makes it uncomfortably warm"
@@ -40,7 +40,7 @@ class Walk(Transportation):
 
     def encounter_obstacles(self):
         choice = input(
-            "What time do you leave Alexanderplatz? a. Before 14:00 b. After 14:00\n"
+            "What time do you leave Hermannplatz? a. Before 14:00 b. After 14:00\n"
         )
         if choice == "a":
             print(
