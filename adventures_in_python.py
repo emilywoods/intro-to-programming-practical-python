@@ -1,3 +1,17 @@
+def introduction_text(name):
+    print("")
+    print(
+        "It's a beautiful summer's day in Berlin, and you are stuck in Hermannplatz :("
+    )
+    print(
+        "You don't want to be here. It is too noisy, there is too much traffic and all this concrete makes it uncomfortably warm"
+    )
+    print("The lakes are calling...")
+    print("")
+    print(f"Well {name}, today we go to Müggelsee!")
+    print("")
+
+
 class Transportation:
     def __init__(self, name, speed, description, obstacles):
         self.name = name
@@ -49,7 +63,25 @@ class Story:
         pass
 
     def start(self):
-        pass
+        name = input("What is your name?\n")
+        introduction_text(name)
+
+        choice = input(
+            "The only question is, how should we go to the lake? a. walking, b. bicycle or c. sbahn\n"
+        )
+        if choice == "a":
+            transportation = Walk()
+        elif choice == "b":
+            transportation = Bicycle()
+        elif choice == "c":
+            transportation = SBahn()
+        else:
+            print("You have not selected a valid option!")
+            exit()
+
+        character = Character(name, transportation)
+
+        self.middle(character, transportation)
 
     def middle(self, character, transportation):
         pass
@@ -57,5 +89,5 @@ class Story:
     def end(self, character):
         pass
 
-    new_story = Story()
-    new_story.start()
+new_story = Story()
+new_story.start()
